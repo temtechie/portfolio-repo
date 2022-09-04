@@ -47,7 +47,6 @@ const Footer = () => {
 
   };
 
-  console.log('formData', formData);
   return (
     <>
       <h2 className="head-text">Take a coffee & chat with me</h2>
