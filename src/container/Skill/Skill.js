@@ -13,18 +13,42 @@ const Skill = () => {
 
   const [experiences, setExperience] = useState([
     {
-      year: 2020, works: [
-        { name: 'FrontEnd Developer', company: 'Flave Technologies', desc: 'I am as a Frontend Developer as Flave Technologies' },
+      year: "2020 - 2022   ", works: [
+        { name: 'FrontEnd Developer', company: 'Flave Technologies, Nigeria. (Remote)', desc: 'I co-joined in building a school management application system at Flave Tech and other apps' },
       ]
-    }]);
+    },
+    {
+      year: "2022 - Present", works: [
+        { name: 'Software Developer', company: 'Nkowa Okwu LLC, USA. (Remote)', desc: 'I contribute to this app that exposes igbo words dataset, building of igbo api doc, creating a python bot that exports igbo dataset to wikidata' },
+      ]
+    },
+    {
+      year: "2023 - 2023   ", works: [
+        { name: 'MERN Stack Developer', company: 'Retro Board, USA. (Remote)', desc: 'Here, I worked as a freelancer using next js 13.4 to contribute in building a trello like app' },
+      ]
+    },
+  ]);
   const [skills, setSkills] = useState([
+    { name: 'HTML', bgColor: '#edf2f8', imgUrl: images.html, icon: AiFillEye, },
+    { name: 'CSS', bgColor: '#edf2f8', imgUrl: images.css, icon: AiFillEye, },
     { name: 'Javascript', bgColor: '#edf2f8', imgUrl: images.javascript, icon: AiFillEye, },
     { name: 'ReactJS', bgColor: '#edf2f8', imgUrl: images.react, icon: AiFillEye, },
+    { name: 'Nextjs', bgColor: '#edf2f8', imgUrl: images.next1, icon: AiFillEye, },
     { name: 'NodeJS', bgColor: '#edf2f8', imgUrl: images.node, icon: AiFillEye, },
-    { name: 'Tyescript', bgColor: '#edf2f8', imgUrl: images.typescript, icon: AiFillEye, },
+    { name: 'Express', bgColor: '#edf2f8', imgUrl: images.express, icon: AiFillEye, },
+    { name: 'Graphql', bgColor: '#edf2f8', imgUrl: "", icon: AiFillEye, },
+    { name: 'MongoDB', bgColor: '#edf2f8', imgUrl: "", icon: AiFillEye, },
+    { name: 'Postgres', bgColor: '#edf2f8', imgUrl: "", icon: AiFillEye, },
+    { name: 'Tyescript', bgColor: '#edf2f8', imgUrl: "", icon: AiFillEye, },
+    { name: 'Firebase', bgColor: '#edf2f8', imgUrl: "", icon: AiFillEye, },
     { name: 'Git', bgColor: '#edf2f8', imgUrl: images.git, icon: AiFillEye, },
     { name: 'Redux', bgColor: '#edf2f8', imgUrl: images.redux, icon: AiFillEye, },
   ]);
+
+  const experienceYearStyle = {
+    color: "blue",
+    fontSize: "20px"
+  };
 
   return (
     <>
@@ -53,9 +77,6 @@ const Skill = () => {
               className="app__skills-exp-item"
 
             >
-              <div className="app__skills-exp-year">
-                <p className="bold-text">{experience.year}</p>
-              </div>
               <motion.div className="app__skills-exp-works">
                 {experience.works.map((work, idx) => (
                   <>
@@ -68,8 +89,8 @@ const Skill = () => {
                       data-for={work.name}
 
                     >
-                      <h4 className="bold-text">{work.name}</h4>
-                      <p className="p-text">{work.company}</p>
+                      <h4 className="bold-text"><span style={experienceYearStyle}>{experience.year}</span> { " " }{work.name}</h4>
+                      <p className="p-text" style={{fontSize: "18px"}}>{work.company}</p>
                     </motion.div>
                     <ReactTooltip
                       id={work.name}

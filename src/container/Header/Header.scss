@@ -63,6 +63,8 @@
         border-radius: 15px;
         flex-direction: row;
         width: auto;
+        background-color: rgb(244, 244, 244);
+
 
         box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     }
@@ -75,6 +77,7 @@
             width: 100%;
             text-transform: uppercase;
             text-align: right;
+            font-size: 20px;
         }
     }
 
