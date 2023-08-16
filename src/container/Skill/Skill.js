@@ -35,14 +35,16 @@ const Skill = () => {
     { name: 'ReactJS', bgColor: '#edf2f8', imgUrl: images.react, icon: AiFillEye, },
     { name: 'Nextjs', bgColor: '#edf2f8', imgUrl: images.next1, icon: AiFillEye, },
     { name: 'NodeJS', bgColor: '#edf2f8', imgUrl: images.node, icon: AiFillEye, },
-    { name: 'Express', bgColor: '#edf2f8', imgUrl: images.express, icon: AiFillEye, },
-    { name: 'Graphql', bgColor: '#edf2f8', imgUrl: "", icon: AiFillEye, },
-    { name: 'MongoDB', bgColor: '#edf2f8', imgUrl: "", icon: AiFillEye, },
-    { name: 'Postgres', bgColor: '#edf2f8', imgUrl: "", icon: AiFillEye, },
-    { name: 'Tyescript', bgColor: '#edf2f8', imgUrl: "", icon: AiFillEye, },
-    { name: 'Firebase', bgColor: '#edf2f8', imgUrl: "", icon: AiFillEye, },
+    { name: 'Express', bgColor: '#edf2f8', imgUrl: images.expressjs, icon: AiFillEye, },
+    { name: 'Graphql', bgColor: '#edf2f8', imgUrl: images.graphql, icon: AiFillEye, },
+    { name: 'MongoDB', bgColor: '#edf2f8', imgUrl: images.mongoDB, icon: AiFillEye, },
+    { name: 'Postgres', bgColor: '#edf2f8', imgUrl: images.postres, icon: AiFillEye, },
+    { name: 'Tyescript', bgColor: '#edf2f8', imgUrl: images.typescript, icon: AiFillEye, },
+    { name: 'Firebase', bgColor: '#edf2f8', imgUrl: images.firebase, icon: AiFillEye, },
     { name: 'Git', bgColor: '#edf2f8', imgUrl: images.git, icon: AiFillEye, },
     { name: 'Redux', bgColor: '#edf2f8', imgUrl: images.redux, icon: AiFillEye, },
+    { name: 'Python', bgColor: '#edf2f8', imgUrl: images.python, icon: AiFillEye, },
+    { name: 'Django', bgColor: '#edf2f8', imgUrl: images.django, icon: AiFillEye, },
   ]);
 
   const experienceYearStyle = {

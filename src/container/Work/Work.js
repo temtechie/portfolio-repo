@@ -1,6 +1,6 @@
-import React, {  useState } from 'react';
+import React, { useState } from 'react';
 import { AiFillEye, AiFillGithub } from 'react-icons/ai';
-import {  motion } from 'framer-motion';
+import { motion } from 'framer-motion';
 
 import { AppWrapp, MotionWrap } from '../../wrapper';
 import { images } from '../../constants';
@@ -11,17 +11,71 @@ import './Work.scss'
 const Work = () => {
 
   const [works, setWorks] = useState([
-    { title: 'React Color changer App', tags: 'React App', imgUrl: images.about03, Description: 'Created a react app that changes to input value color name', link: '#', code: '/' },
-    { title: 'React App', tags: 'Web App', imgUrl: images.about01, Description: 'Involved in developing a school system web app for all school activities', link: '#', code: '/' },
-    { title: 'Node Js', tags: 'Node JS', imgUrl: images.node, Description: 'Created a simple nodejs api', link: '#', code: '/' },
+    {
+      title: 'React Color changer App',
+      tags: 'React App',
+      imgUrl: images.retroBoard,
+      Description: 'Created a react app that changes to input value color name',
+      link: '#',
+      code: '/'
+    },
+    {
+      title: 'React App',
+      tags: 'Web App',
+      imgUrl: images.about01,
+      Description: 'Involved in developing a school system web app for all school activities',
+      link: '#',
+      code: '/'
+    },
+    {
+      title: 'Node Js',
+      tags: 'Node JS',
+      imgUrl: images.node,
+      Description: 'Created a simple nodejs api',
+      link: '#',
+      code: '/'
+    },
+    {
+      title: 'Node Js',
+      tags: 'Node JS',
+      imgUrl: images.node,
+      Description: 'Created a simple nodejs api',
+      link: '#',
+      code: '/'
+    },
   ]);
 
   const [activeFilter, setActiveFilter] = useState('All');
   const [animateCard, setAnimateCard] = useState({ y: 0, opacity: 1 });
   const [filterWork, setFilterWork] = useState([
-    { title: 'React Color changer App', tags: 'React App', imgUrl: images.about03, Description: 'Created a react app that changes to input value color name', link: '#', code: '/' },
-    { title: 'React App', tags: 'Web App', imgUrl: images.about01, Description: 'Involved in developing a school system web app for all school activities', link: '#', code: '/' },
-    { title: 'Node Js', tags: 'Node JS', imgUrl: images.node, Description: 'Created a simple nodejs api, Fully tested with postman', link: '#', code: '/' },
+    {
+      title: 'Retro Board App',
+      tags: 'Retro Board App',
+      imgUrl: images.retroBoard,
+      Description: 'This is a restropective mgt app, created using Next.js,React, Node, Firebase etc.',
+      link: '#', code: '/'
+    },
+    {
+      title: 'Igbo API Doc Site',
+      tags: 'Igbo API Doc Site',
+      imgUrl: images.igboAPIDoc,
+      Description: 'This the Igbo api Doc app, Here i used nextra, next, react, tailwind etc in building the app',
+      link: '#', code: '/'
+    },
+    {
+      title: 'Igbo API Admin',
+      tags: 'Igbo API Admin',
+      imgUrl: images.igboAPIAdmin,
+      Description: 'Co-joined in building the Igbo API Admin, using Chakra UI, MUI, Tailwind, firebase, mongodb etc.',
+      link: '#', code: '/'
+    },
+    {
+      title: 'Nkowa Okwu Dictionary',
+      tags: 'Nkowa Okwu Dictionary',
+      imgUrl: images.NkowaOkwu,
+      Description: 'This is the main Igbo API Igbo lang. dictionary app. i join in maintaing the Nkowa Okwu Dictionary',
+      link: '#', code: '/'
+    },
   ]);
 
   const handleWorkFilter = (item) => {
@@ -39,21 +93,20 @@ const Work = () => {
     }, 500);
   };
 
+  const workDividerStyle = {
+    width: '50%', 
+    height: '2px',
+    backgroundColor: '#313bac', 
+    margin: 'auto',
+  }
+  const workTag = {
+    backgroundColor: "rgba(240, 237, 237, 0.9)",
+  }
+
   return (
     <>
-      <h2 className='head-text'>My Creative <span> Portfolio </span> Section </h2>
-
-      <div className='app__work-filter'>
-        {['React App', 'Web App', 'Node JS', 'All'].map((item, index) => (
-          <div
-            key={index}
-            onClick={() => handleWorkFilter(item)}
-            className={`app__work-filter-item app__flex p-text ${activeFilter === item ? "item-active" : ""}`}
-          >
-            {item}
-          </div>
-        ))}
-      </div>
+      <h2 className='head-text'>Recent Work <span>Portfolio</span> </h2>
+      <div className='work-divider' style={workDividerStyle} />
       <motion.div
         animate={animateCard}
         transition={{ duration: 0.5, delayChildren: 0.5 }}
@@ -80,7 +133,7 @@ const Work = () => {
                     <AiFillEye />
                   </motion.div>
                 </a>
-                <a  rel='noreferrer'>
+                <a rel='noreferrer'>
                   <motion.div
                     whileInView={{ scale: [0, 1] }}
                     whileHover={{ scale: [1, 0.9] }}
@@ -95,8 +148,8 @@ const Work = () => {
             <div className='app__work-content app__flex'>
               <h4 className="bold-text">{work.title}</h4>
               <p className='p-text' style={{ marginTop: 10 }}>{work.Description}</p>
-              <div className='app__work-tag app__flex'>
-                <p className='p-text'>{work.tags}</p>
+              <div className='app__work-tag app__flex' style={workTag}>
+                <p className='p-text' >{work.tags}</p>
               </div>
             </div>
           </div>

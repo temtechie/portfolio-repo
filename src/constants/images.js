@@ -17,6 +17,17 @@ import redux from '../assets/redux.png';
 import sass from '../assets/sass.png';
 import typescript from '../assets/typescript.png';
 import vue from '../assets/vue.png';
+import next1 from '../assets/next.jpg';
+import expressjs from '../assets/express.png';
+import mongoDB from '../assets/mongodb.png';
+import postres from '../assets/postgres.png';
+import firebase from '../assets/firebase.png';
+import django from '../assets/django.png';
+
+import retroBoard from '../assets/upwork-retroboard.png';
+import igboAPIAdmin from '../assets/igboapi-admin.png';
+import igboAPIDoc from '../assets/igboapidocimage.png';
+import NkowaOkwu from '../assets/nkowaokwu.png';
 
 import about01 from '../assets/about01.png';
 import about02 from '../assets/about02.png';
@@ -83,4 +94,17 @@ export default {
   wisdompic,
   seunpic,
   flavelogo,
+  retroBoard,
+  igboAPIAdmin,
+  igboAPIDoc,
+  NkowaOkwu,
+  next1,
+  expressjs,
+  typescript,
+  python,
+  django,
+  graphql,
+  mongoDB,
+  postres,
+  firebase,
 };
